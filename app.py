@@ -39,6 +39,7 @@ plt.xlabel('Kategori Sayısı')
 plt.ylabel('Kategori')
 plt.tight_layout()
 plt.show()
+<<<<<<< HEAD
 
 
 # Assuming you have a 'date' column
@@ -52,3 +53,34 @@ plt.xlabel('Tarih')
 plt.ylabel('Ortalama Besin Miktarı')
 plt.tight_layout()
 plt.show()
+=======
+<<<<<<< HEAD
+
+
+category_amounts = df.groupby('description_category')['amount'].sum()
+category_amounts.plot(kind='bar', figsize=(10,6), color='lightgreen')
+
+plt.title('Toplam Besin Miktarı Kategori Bazında')
+plt.xlabel('Kategori')
+plt.ylabel('Toplam Miktar')
+plt.xticks(rotation=45, ha="right")
+plt.tight_layout()
+plt.show()
+
+df.boxplot(column='amount', by='description_category', figsize=(10,6), vert=False)
+plt.title('Besin Değerlerinin Kategoriye Göre Dağılımı')
+plt.suptitle('')
+plt.xlabel('Besin Değeri')
+plt.tight_layout()
+plt.show()
+
+
+df['amount'].hist(bins=20, figsize=(10,6), color='purple', alpha=0.7)
+plt.title('Besin Değerlerinin Dağılımı')
+plt.xlabel('Besin Miktarı')
+plt.ylabel('Frekans')
+plt.tight_layout()
+plt.show()
+=======
+>>>>>>> 46864d1e1e4d3945ee3d2ef087198b074f28c7b1
+>>>>>>> feature/new_feature
