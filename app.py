@@ -39,6 +39,7 @@ plt.xlabel('Kategori Sayısı')
 plt.ylabel('Kategori')
 plt.tight_layout()
 plt.show()
+<<<<<<< HEAD
 
 
 category_amounts = df.groupby('description_category')['amount'].sum()
@@ -65,3 +66,5 @@ plt.xlabel('Besin Miktarı')
 plt.ylabel('Frekans')
 plt.tight_layout()
 plt.show()
+=======
+>>>>>>> 46864d1e1e4d3945ee3d2ef087198b074f28c7b1
