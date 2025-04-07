@@ -39,3 +39,16 @@ plt.xlabel('Kategori Sayısı')
 plt.ylabel('Kategori')
 plt.tight_layout()
 plt.show()
+
+
+# Assuming you have a 'date' column
+df['date'] = pd.to_datetime(df['date'])
+df.set_index('date', inplace=True)
+
+# Time series plot
+df['amount'].resample('M').mean().plot(figsize=(10,6))
+plt.title('Zamanla Ortalama Besin Değeri')
+plt.xlabel('Tarih')
+plt.ylabel('Ortalama Besin Miktarı')
+plt.tight_layout()
+plt.show()
