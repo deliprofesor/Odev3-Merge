@@ -48,7 +48,9 @@ You can install these libraries using pip:
 pip install pandas matplotlib
 
 git clone https://github.com/deliprofesor/Odev3-Merge.git
+
 cd Odev3-Merge
+
 python aap.py
 
 
