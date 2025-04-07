@@ -42,6 +42,21 @@ plt.show()
 <<<<<<< HEAD
 
 
+# Assuming you have a 'date' column
+df['date'] = pd.to_datetime(df['date'])
+df.set_index('date', inplace=True)
+
+# Time series plot
+df['amount'].resample('M').mean().plot(figsize=(10,6))
+plt.title('Zamanla Ortalama Besin Değeri')
+plt.xlabel('Tarih')
+plt.ylabel('Ortalama Besin Miktarı')
+plt.tight_layout()
+plt.show()
+=======
+<<<<<<< HEAD
+
+
 category_amounts = df.groupby('description_category')['amount'].sum()
 category_amounts.plot(kind='bar', figsize=(10,6), color='lightgreen')
 
@@ -68,3 +83,4 @@ plt.tight_layout()
 plt.show()
 =======
 >>>>>>> 46864d1e1e4d3945ee3d2ef087198b074f28c7b1
+>>>>>>> feature/new_feature
